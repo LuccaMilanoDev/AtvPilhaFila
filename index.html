@@ -6,21 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <form id="form">
         <input type="number" id="number">
-        <label for="number" value="" ></label>
-    </div>
+    </form>
     <br>
     <div id="button">
         <button onclick="add()">Adicionar</button>
         <button onclick="remove()">Remover</button>
         <button onclick="clean()">Limpar</button>
     </div>
-    <div>
-        <input type="radio" name="check" value="check">
-        <label for="radio">pilha</label>
-        <input type="radio" name="check" value="check">
-        <label for="radio">fila</label>
+    <div id="FilaOuPilha">
+        <input type="radio" name="tipo" id="pilha" value="pilha" onchange="isPilha(); clean()">
+        <label for="pilha">pilha</label>
+        <input type="radio" name="tipo" id="fila" value="fila" onchange="isFila(); clean()">
+        <label for="fila">fila</label>
     </div>
     <script src="script.js" ></script>
 </body>
